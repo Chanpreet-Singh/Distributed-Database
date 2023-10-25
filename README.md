@@ -46,33 +46,32 @@ Module 6: Export Structure & Value
   3. You cannot use any external packages, and as mentioned, your export format must be in SQL
   4. Your data dump must capture the current state of the database (E.g. if there is any update performed on a data, it must be reflected in the data dump. Do not write create or insert statements from console input to a file as the SQL export. You must dynamically generate it)
 
-  Module 7: Analytics
-    1. The D2_DB application should provide some basic analytics – The results must be written in files, and displayed on screen
-      a. How many queries (valid + invalid) are submitted by Database. (E.g. ran in VM1 instance)
-          E.g.: >> count queries;
-                  “user SDEY submitted 10 queries for DB1 running on Virtual Machine 1”
-                  “user Alex submitted 3 queries for DB2 running on Virtual Machine 2”
-      b. How many Update operations are successfully executed by Tables
-          E.g. >> count update DB1;
-                  “Total 9 Update operations are performed on Employee”
-                  “Total 3 Update operations are performed on Department”
+Module 7: Analytics<br>
+  1. The D2_DB application should provide some basic analytics – The results must be written in files, and displayed on screen<br>
+     a. How many queries (valid + invalid) are submitted by Database. (E.g. ran in VM1 instance)<br>
+     E.g.: >> count queries;<br>
+         “user SDEY submitted 10 queries for DB1 running on Virtual Machine 1”<br>
+         “user Alex submitted 3 queries for DB2 running on Virtual Machine 2”<br>
+     b. How many Update operations are successfully executed by Tables<br>
+     E.g. >> count update DB1;<br>
+         “Total 9 Update operations are performed on Employee”<br>
+         “Total 3 Update operations are performed on Department”<br>
                 
-  Module 8: User Interface & Login Security
-    1. Your user interface design should be basic console based
-    2. It must provide access to the valid user only.
-    3. User interface can be menu driven, and provide options for registration or login
-    4. For registration, it should accept the userID, password, and security questions/answers - and store all information in the User_Profile text file
-      a. Use some hashing like md5, Sha1 etc. and store the hashed UserID, hashed password in the file. (you can use Java libraries for hashing)
-      b. You do not have to encrypt security question/answer.
-    
-    5. If a registered user wants to access the system he/she/they needs to provide valid UserID, and password, which will be hashed, and checked with the entry available in the User_Profile text file. The security answer will also be asked at login. Since you are building a distributed database management system, User_Profile text file needs to be present in both vistual machine instances.
-    6. Once the users gain access, they get 5 options.
-      E.g.
-      1. Write Queries
-      2. Export
-      3. Data Model
-      4. Analytics
-      7. The “Write Queries” option should work for both normal queries and transaction.
+Module 8: User Interface & Login Security<br>
+  1. Your user interface design should be basic console-based<br>
+  2. It must provide access to the valid user only.<br>
+  3. User interface can be menu driven, and provide options for registration or login<br>
+  4. For registration, it should accept the userID, password, and security questions/answers - and store all information in the User_Profile text file<br>
+      a. Use some hashing like md5, Sha1 etc. and store the hashed UserID, hashed password in the file. (you can use Java libraries for hashing)<br>
+      b. You do not have to encrypt security question/answer.<br>
+  5. If a registered user wants to access the system he/she/they needs to provide valid UserID, and password, which will be hashed, and checked with the entry available in the User_Profile text file. The security answer will also be asked at login. Since you are building a distributed database management system, User_Profile text file needs to be present in both vistual machine instances.<br>
+  6. Once the users gain access, they get 5 options.<br>
+      E.g.<br>
+      1. Write Queries<br>
+      2. Export<br>
+      3. Data Model<br>
+      4. Analytics<br>
+  7. The “Write Queries” option should work for both normal queries and transaction.
 
 
 
